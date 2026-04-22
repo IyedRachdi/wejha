@@ -1,0 +1,166 @@
+type UserRole = 
+ variant {
+   driver;
+   pmr;
+   student;
+ };
+type UserProfile = 
+ record {
+   badge: StudentBadge;
+   completedMissions: nat;
+   createdAt: Timestamp;
+   driverLicense: opt text;
+   familyMembers: vec UserId;
+   id: UserId;
+   isAvailable: bool;
+   isPremium: bool;
+   name: text;
+   phone: text;
+   pmrLabel: bool;
+   points: nat;
+   profilePhotoKey: opt text;
+   role: UserRole;
+   totalEarningsDriver: nat;
+   totalEarningsStudent: nat;
+   trustScore: nat;
+   verifiedBadge: bool;
+ };
+type UserId = principal;
+type Timestamp = int;
+type StudentProgress = 
+ record {
+   badge: variant {
+            bronze;
+            gold;
+            silver;
+          };
+   completedMissions: nat;
+   points: nat;
+   totalEarnings: nat;
+ };
+type StudentDashboard = 
+ record {
+   activeBookings: vec BookingId;
+   profile: UserProfile;
+   recentMissions: vec MissionId;
+ };
+type StudentBadge = 
+ variant {
+   bronze;
+   gold;
+   silver;
+ };
+type ServiceType = 
+ variant {
+   homeHelp;
+   medical;
+   other;
+   shopping;
+   transport;
+ };
+type Result_4 = 
+ variant {
+   err: text;
+   ok: StudentProgress;
+ };
+type Result_3 = 
+ variant {
+   err: text;
+   ok: UserProfile;
+ };
+type Result_2 = 
+ variant {
+   err: text;
+   ok: UserId;
+ };
+type Result_1 = 
+ variant {
+   err: text;
+   ok: BookingId;
+ };
+type Result = 
+ variant {
+   err: text;
+   ok;
+ };
+type ProviderSummary = 
+ record {
+   badge: StudentBadge;
+   id: UserId;
+   isAvailable: bool;
+   name: text;
+   profilePhotoKey: opt text;
+   role: UserRole;
+   trustScore: nat;
+   verifiedBadge: bool;
+ };
+type MissionId = nat;
+type Mission = 
+ record {
+   category: ServiceType;
+   createdAt: Timestamp;
+   description: text;
+   durationMinutes: nat;
+   id: MissionId;
+   isActive: bool;
+   payoutAmount: nat;
+   pointsReward: nat;
+ };
+type BookingStatus = 
+ variant {
+   arrived;
+   cancelled;
+   completed;
+   confirmed;
+   enRoute;
+   requested;
+ };
+type BookingRequest = 
+ record {
+   dateTime: Timestamp;
+   isPriority: bool;
+   locationText: text;
+   notes: text;
+   serviceType: ServiceType;
+ };
+type BookingId = nat;
+type Booking = 
+ record {
+   createdAt: Timestamp;
+   dateTime: Timestamp;
+   id: BookingId;
+   isPriority: bool;
+   locationText: text;
+   missionId: opt MissionId;
+   notes: text;
+   pmrUserId: UserId;
+   providerId: opt UserId;
+   serviceType: ServiceType;
+   status: BookingStatus;
+ };
+service : {
+  acceptMission: (missionId: MissionId) -> (Result_1);
+  addFamilyMember: (member: UserId) -> (Result);
+  completeMission: (bookingId: BookingId) -> (Result_4);
+  getAvailableMissions: () -> (vec Mission) query;
+  getDriverQueue: () -> (vec Booking) query;
+  getMyBookings: () -> (vec Booking) query;
+  getMyProfile: () -> (Result_3) query;
+  getMyStudentDashboard: () -> (StudentDashboard) query;
+  getPublicProviders: (serviceType: variant {
+                                      driver;
+                                      student;
+                                    }, minRating: nat) ->
+   (vec ProviderSummary) query;
+  registerUser: (role: UserRole, name: text, phone: text) -> (Result_2);
+  removeFamilyMember: (member: UserId) -> (Result);
+  requestBooking: (req: BookingRequest) -> (Result_1);
+  submitReview: (bookingId: BookingId, stars: nat, "text": text) -> (Result);
+  subscribePremium: () -> (Result);
+  toggleDriverAvailability: (isAvailable: bool) -> (Result);
+  updateBookingStatus: (bookingId: BookingId, newStatus: BookingStatus) ->
+   (Result);
+  updateProfile: (name: text, phone: text, profilePhotoKey: opt text) ->
+   (Result);
+  uploadVerificationDoc: (role: UserRole, assetKey: text) -> (Result);
+}

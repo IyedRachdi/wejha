@@ -1,0 +1,113 @@
+// Version: 1.0.0
+type BookingId__572944220 = Nat;
+type BookingInternal__812515283 =
+  {
+    createdAt : Timestamp__301639476;
+    dateTime : Timestamp__301639476;
+    id : BookingId__572944220;
+    isPriority : Bool;
+    locationText : Text;
+    var missionId : ?MissionId__510522460;
+    notes : Text;
+    pmrUserId : UserId__158757552;
+    var providerId : ?UserId__158757552;
+    serviceType : ServiceType__440917733;
+    var status : BookingStatus__866642965
+  };
+type BookingStatus__866642965 =
+  {#arrived; #cancelled; #completed; #confirmed; #enRoute; #requested};
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Int__270357528 = Int__616954475;
+type Int__616954475 = Int;
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Map__158565046<K, V> = Map__297112838<K, V>;
+type Map__297112838<K, V> =
+  {var root : Node__46230540<K, V>; var size : Nat__490723111};
+type Map__605269027<K, V> = Map__158565046<K, V>;
+type MissionId__510522460 = Nat;
+type MissionInternal__129908802 =
+  {
+    category : ServiceType__440917733;
+    createdAt : Timestamp__301639476;
+    description : Text;
+    durationMinutes : Nat;
+    id : MissionId__510522460;
+    var isActive : Bool;
+    payoutAmount : Nat;
+    pointsReward : Nat
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type ReviewId__496285678 = Nat;
+type ReviewInternal__609018322 =
+  {
+    bookingId : BookingId__572944220;
+    createdAt : Timestamp__301639476;
+    id : ReviewId__496285678;
+    revieweeId : UserId__158757552;
+    reviewerId : UserId__158757552;
+    stars : Nat;
+    text : Text
+  };
+type ServiceType__440917733 =
+  {#homeHelp; #medical; #other; #shopping; #transport};
+type StudentBadge__542317941 = {#bronze; #gold; #silver};
+type Time__796480547 = Int__270357528;
+type Time__900049286 = Time__796480547;
+type Timestamp__301639476 = Time__900049286;
+type UserId__1043627770 = UserId__158757552;
+type UserId__158757552 = Principal;
+type UserInternal__993508630 =
+  {
+    var badge : StudentBadge__542317941;
+    var completedMissions : Nat;
+    createdAt : Timestamp__301639476;
+    var driverLicense : ?Text;
+    var familyMembers : [UserId__1043627770];
+    id : UserId__1043627770;
+    var isAvailable : Bool;
+    var isPremium : Bool;
+    var name : Text;
+    var phone : Text;
+    var pmrLabel : Bool;
+    var points : Nat;
+    var profilePhotoKey : ?Text;
+    role : UserRole__41952412;
+    var totalEarningsDriver : Nat;
+    var totalEarningsStudent : Nat;
+    var trustScore : Nat;
+    var verificationDocKey : ?Text;
+    var verifiedBadge : Bool
+  };
+type UserRole__41952412 = {#driver; #pmr; #student};
+actor {
+  stable bookingState :
+    {
+      bookings :
+        Map__605269027<BookingId__572944220, BookingInternal__812515283>;
+      var nextId : Nat
+    };
+  stable missionState :
+    {
+      missions :
+        Map__605269027<MissionId__510522460, MissionInternal__129908802>;
+      var nextId : Nat
+    };
+  stable reviewState :
+    {
+      var nextId : Nat;
+      reviews :
+        Map__605269027<ReviewId__496285678, ReviewInternal__609018322>
+    };
+  stable var stateInitialized : Bool;
+  stable userState :
+    {
+      var nextUserId : Nat;
+      users : Map__605269027<UserId__158757552, UserInternal__993508630>
+    }
+};

@@ -1,0 +1,25 @@
+{
+  "overview": "Wejha (وجهة) is a Tunisian mobile-first platform connecting people with mobility restrictions (PMR), student helpers, and PMR-certified taxi drivers. With inclusive accessibility design, gamification for students, and real-time booking and tracking, Wejha makes mobility and daily assistance accessible to everyone — \"Ensemble, sans frontières.\"",
+  "features": [
+    "Role-based flows for PMR users, student helpers, and drivers",
+    "Accessible UI: high-contrast mode, adjustable text size, large touch targets",
+    "Gamification for students: Bronze/Silver/Gold badge system with points and missions",
+    "Real-time booking status tracking (Requested → Confirmed → En Route → Arrived → Completed)",
+    "Verified profile badges with trust scores and 5-star reviews",
+    "PMR Premium subscription: priority access and dedicated provider",
+    "Family mode: manage bookings on behalf of a loved one",
+    "Modern violet/turquoise/anthracite design system"
+  ],
+  "category": "marketplace",
+  "tags": [
+    "accessibility",
+    "tunisia",
+    "mobility",
+    "pmr",
+    "gamification",
+    "marketplace",
+    "booking",
+    "inclusive-design"
+  ],
+  "last_updated": "2026-04-22T17:11:53.157Z"
+}

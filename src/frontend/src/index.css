@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "General Sans";
+    --font-body: "DM Sans";
+    --font-mono: "Geist Mono";
+    --radius: 1rem;
+
+    --background: 0.97 0.008 270;
+    --foreground: 0.18 0.02 280;
+    --card: 0.99 0.004 270;
+    --card-foreground: 0.18 0.02 280;
+    --popover: 0.99 0.004 270;
+    --popover-foreground: 0.18 0.02 280;
+
+    --primary: 0.55 0.22 310;
+    --primary-foreground: 0.98 0.002 310;
+
+    --secondary: 0.65 0.18 210;
+    --secondary-foreground: 0.98 0.002 210;
+    --muted: 0.92 0.01 270;
+    --muted-foreground: 0.48 0.008 280;
+
+    --accent: 0.65 0.18 210;
+    --accent-foreground: 0.18 0.02 210;
+
+    --destructive: 0.55 0.24 25;
+    --destructive-foreground: 0.98 0.002 25;
+
+    --success: 0.6 0.16 140;
+    --success-foreground: 0.98 0.002 140;
+
+    --warning: 0.72 0.15 85;
+    --warning-foreground: 0.98 0.002 85;
+
+    --border: 0.88 0.008 270;
+    --input: 0.92 0.008 270;
+    --ring: 0.55 0.22 310;
+
+    --chart-1: 0.55 0.22 310;
+    --chart-2: 0.65 0.18 210;
+    --chart-3: 0.6 0.16 140;
+    --chart-4: 0.72 0.15 85;
+    --chart-5: 0.55 0.24 25;
+
+    --sidebar: 0.99 0.004 270;
+    --sidebar-foreground: 0.18 0.02 280;
+    --sidebar-primary: 0.55 0.22 310;
+    --sidebar-primary-foreground: 0.98 0.002 310;
+    --sidebar-accent: 0.65 0.18 210;
+    --sidebar-accent-foreground: 0.18 0.02 210;
+    --sidebar-border: 0.88 0.008 270;
+    --sidebar-ring: 0.55 0.22 310;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(var(--primary)),
+      oklch(var(--secondary))
+    );
+    --gradient-muted: linear-gradient(
+      135deg,
+      oklch(var(--muted)),
+      oklch(var(--background))
+    );
+  }
+
+  .dark {
+    --background: 0.14 0.015 280;
+    --foreground: 0.94 0.008 280;
+    --card: 0.18 0.018 280;
+    --card-foreground: 0.94 0.008 280;
+    --popover: 0.22 0.02 280;
+    --popover-foreground: 0.94 0.008 280;
+
+    --primary: 0.72 0.22 310;
+    --primary-foreground: 0.14 0.015 310;
+
+    --secondary: 0.75 0.18 210;
+    --secondary-foreground: 0.14 0.015 210;
+    --muted: 0.24 0.015 280;
+    --muted-foreground: 0.62 0.01 280;
+
+    --accent: 0.75 0.18 210;
+    --accent-foreground: 0.14 0.015 210;
+
+    --destructive: 0.62 0.24 25;
+    --destructive-foreground: 0.94 0.008 25;
+
+    --success: 0.65 0.16 140;
+    --success-foreground: 0.14 0.015 140;
+
+    --warning: 0.78 0.15 85;
+    --warning-foreground: 0.14 0.015 85;
+
+    --border: 0.3 0.018 280;
+    --input: 0.3 0.018 280;
+    --ring: 0.72 0.22 310;
+
+    --chart-1: 0.72 0.22 310;
+    --chart-2: 0.75 0.18 210;
+    --chart-3: 0.65 0.16 140;
+    --chart-4: 0.78 0.15 85;
+    --chart-5: 0.62 0.24 25;
+
+    --sidebar: 0.18 0.018 280;
+    --sidebar-foreground: 0.94 0.008 280;
+    --sidebar-primary: 0.72 0.22 310;
+    --sidebar-primary-foreground: 0.14 0.015 310;
+    --sidebar-accent: 0.75 0.18 210;
+    --sidebar-accent-foreground: 0.14 0.015 210;
+    --sidebar-border: 0.3 0.018 280;
+    --sidebar-ring: 0.72 0.22 310;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      oklch(var(--primary)),
+      oklch(var(--secondary))
+    );
+    --gradient-muted: linear-gradient(
+      135deg,
+      oklch(var(--muted)),
+      oklch(var(--background))
+    );
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Accessibility: text-size scale */
+[data-text-size="small"] body {
+  font-size: 14px;
+}
+[data-text-size="medium"] body {
+  font-size: 16px;
+}
+[data-text-size="large"] body {
+  font-size: 18px;
+}
+
+/* Accessibility: high-contrast mode */
+[data-high-contrast="true"] {
+  --background: 1 0 0;
+  --foreground: 0 0 0;
+  --card: 1 0 0;
+  --card-foreground: 0 0 0;
+  --primary: 0.35 0.22 310;
+  --primary-foreground: 1 0 0;
+  --secondary: 0.35 0.22 210;
+  --secondary-foreground: 1 0 0;
+  --border: 0 0 0;
+  --muted: 0.9 0 0;
+  --muted-foreground: 0.1 0 0;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-muted {
+    background: var(--gradient-muted);
+  }
+
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .sr-accessible {
+    @apply text-lg leading-relaxed;
+  }
+
+  .badge-verified {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold;
+    background: oklch(var(--success) / 0.1);
+    color: oklch(var(--success));
+  }
+
+  .card-elevated {
+    @apply rounded-2xl shadow-md hover:shadow-lg transition-smooth;
+    background: oklch(var(--card));
+  }
+
+  .button-primary {
+    @apply touch-target rounded-lg font-semibold transition-smooth hover:opacity-90 active:scale-95;
+    background: oklch(var(--primary));
+    color: oklch(var(--primary-foreground));
+  }
+
+  .button-secondary {
+    @apply touch-target rounded-lg font-semibold transition-smooth hover:opacity-90 active:scale-95;
+    background: oklch(var(--secondary));
+    color: oklch(var(--secondary-foreground));
+  }
+
+  .button-ghost {
+    @apply touch-target rounded-lg font-semibold transition-smooth hover:opacity-90 active:scale-95;
+    color: oklch(var(--foreground));
+  }
+}
