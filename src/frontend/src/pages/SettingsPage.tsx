@@ -370,7 +370,7 @@ export default function SettingsPage() {
           transition={{ delay: 0.16 }}
           className="text-center py-4 space-y-1"
         >
-          <p className="text-sm font-bold text-foreground">Wejha وجهة</p>
+          <p className="text-sm font-bold text-foreground">Rafiqni رافقني</p>
           <p className="text-xs text-muted-foreground">Version 1.0.0</p>
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()}. Built with love using{" "}

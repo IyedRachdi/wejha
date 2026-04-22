@@ -110,7 +110,7 @@ export function EarningsWidget({
                     height: `${Math.max(heightPct, 6)}%`,
                     background: isToday
                       ? "oklch(0.65 0.18 210)"
-                      : "oklch(0.55 0.22 310)",
+                      : "oklch(0.50 0.18 220)",
                     minHeight: "4px",
                   }}
                   aria-hidden="true"

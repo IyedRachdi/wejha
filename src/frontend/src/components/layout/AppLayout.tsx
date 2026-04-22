@@ -26,7 +26,7 @@ export function AppLayout({
   children,
   activeTab,
   onTabChange,
-  title = "Wejha",
+  title = "Rafiqni",
   showSos = false,
   userRole: roleProp,
 }: AppLayoutProps) {
@@ -41,9 +41,17 @@ export function AppLayout({
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground shadow-md">
         <div className="flex items-center justify-between px-4 max-w-lg mx-auto h-14">
-          <span className="font-display font-bold text-xl tracking-tight">
-            {title}
-          </span>
+          <div className="flex min-w-0 items-center gap-3">
+            <img
+              src="/favicon.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-9 w-9 shrink-0 rounded-xl"
+            />
+            <span className="min-w-0 truncate font-display font-bold text-xl tracking-tight">
+              {title}
+            </span>
+          </div>
           <div className="flex items-center gap-2">
             {showSos && (
               <button

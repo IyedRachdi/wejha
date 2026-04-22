@@ -204,8 +204,8 @@ export default function DriverDashboardPage() {
               className="p-4 rounded-2xl border shadow-sm space-y-3"
               style={{
                 background:
-                  "linear-gradient(135deg, oklch(0.55 0.22 310 / 0.05), oklch(0.65 0.18 210 / 0.05))",
-                borderColor: "oklch(0.55 0.22 310 / 0.25)",
+                  "linear-gradient(135deg, oklch(0.50 0.18 220 / 0.05), oklch(0.68 0.18 95 / 0.05))",
+                borderColor: "oklch(0.50 0.18 220 / 0.25)",
               }}
             >
               <h3
@@ -219,11 +219,11 @@ export default function DriverDashboardPage() {
               <div className="flex items-center gap-3">
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold text-primary-foreground flex-shrink-0"
-                  style={{ background: "oklch(0.55 0.22 310)" }}
+                  style={{ background: "oklch(0.50 0.18 220)" }}
                   aria-hidden="true"
                 >
-                  {activeMission.providerName
-                    ? activeMission.providerName
+                  {activeMission.clientName
+                    ? activeMission.clientName
                         .split(" ")
                         .map((w) => w[0])
                         .slice(0, 2)
@@ -232,7 +232,7 @@ export default function DriverDashboardPage() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <p className="font-semibold text-foreground">
-                    {activeMission.providerName?.split(" ")[0] ?? "Client"}
+                    {activeMission.clientName?.split(" ")[0] ?? "Client"}
                   </p>
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground mt-0.5">
                     <span aria-hidden="true">
@@ -436,7 +436,7 @@ export default function DriverDashboardPage() {
                 color: "oklch(0.40 0.18 210)",
                 border: "1.5px solid oklch(0.65 0.18 210 / 0.4)",
               }}
-              aria-label="Label PMR certifié par Wejha"
+              aria-label="Label PMR certifié par Rafiqni"
             >
               <CheckCircle className="w-5 h-5" aria-hidden="true" />
               Label PMR Certifié ✓

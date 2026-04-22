@@ -47,8 +47,9 @@ export function MissionQueueCard({
   isPriority = false,
   index = 1,
 }: MissionQueueCardProps) {
-  const clientFirstName = booking.providerName?.split(" ")[0] ?? "Client";
-  const initials = getInitials(booking.providerName ?? "CL");
+  const clientName = booking.clientName ?? "Client";
+  const clientFirstName = clientName.split(" ")[0] ?? "Client";
+  const initials = getInitials(clientName);
   const service = serviceLabels[booking.serviceType];
   const timeReceived = timeAgo(booking.createdAt);
   const payout = estimatedPayout(booking.price);
@@ -66,9 +67,9 @@ export function MissionQueueCard({
         <span
           className="absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold"
           style={{
-            background: "oklch(0.55 0.22 310 / 0.15)",
-            color: "oklch(0.45 0.22 310)",
-            border: "1px solid oklch(0.55 0.22 310 / 0.3)",
+            background: "oklch(0.50 0.18 220 / 0.15)",
+            color: "oklch(0.42 0.18 220)",
+            border: "1px solid oklch(0.50 0.18 220 / 0.3)",
           }}
           aria-label="Mission prioritaire"
         >
@@ -81,7 +82,7 @@ export function MissionQueueCard({
         {/* Avatar */}
         <div
           className="w-11 h-11 rounded-full flex items-center justify-center text-sm font-bold text-primary-foreground flex-shrink-0"
-          style={{ background: "oklch(0.55 0.22 310)" }}
+          style={{ background: "oklch(0.50 0.18 220)" }}
           aria-hidden="true"
         >
           {initials}

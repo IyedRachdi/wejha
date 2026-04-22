@@ -85,7 +85,7 @@ export function SubscriptionCard({
       <div className="gradient-primary p-5 space-y-4">
         <div>
           <h3 className="font-bold text-xl text-primary-foreground flex items-center gap-2">
-            <span aria-hidden="true">✨</span> Wejha Premium
+            <span aria-hidden="true">✨</span> Rafiqni Premium
           </h3>
           <p className="text-primary-foreground/80 text-sm mt-1">
             Profitez d'une expérience prioritaire et personnalisée

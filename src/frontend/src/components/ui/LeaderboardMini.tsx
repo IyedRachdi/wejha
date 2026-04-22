@@ -24,21 +24,21 @@ const rankMedal = ["🥇", "🥈", "🥉"];
 const mockLeaders: LeaderboardEntry[] = [
   {
     rank: 1,
-    displayName: "Amira B.",
+    displayName: "Amira Ben Salah",
     badge: "gold",
     points: 2340,
     isCurrentUser: false,
   },
   {
     rank: 2,
-    displayName: "Yassine C.",
+    displayName: "Yassine Cherif",
     badge: "gold",
     points: 2105,
     isCurrentUser: false,
   },
   {
     rank: 3,
-    displayName: "Ahmed K.",
+    displayName: "Salma Bouzid",
     badge: "silver",
     points: 1890,
     isCurrentUser: true,
@@ -79,7 +79,7 @@ export function LeaderboardMini({ className }: LeaderboardMiniProps) {
             )}
             style={
               entry.isCurrentUser
-                ? { background: "oklch(0.55 0.22 310 / 0.08)" }
+                ? { background: "oklch(0.50 0.18 220 / 0.08)" }
                 : undefined
             }
             aria-current={entry.isCurrentUser ? "true" : undefined}
@@ -95,7 +95,7 @@ export function LeaderboardMini({ className }: LeaderboardMiniProps) {
             {/* Avatar */}
             <div
               className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold text-primary-foreground"
-              style={{ background: "oklch(0.55 0.22 310)" }}
+              style={{ background: "oklch(0.50 0.18 220)" }}
               aria-hidden="true"
             >
               {getInitials(entry.displayName)}

@@ -42,7 +42,7 @@ export function ServiceCard({
           {/* Avatar circle */}
           <div
             className="w-11 h-11 rounded-full flex items-center justify-center text-xl flex-shrink-0"
-            style={{ background: "oklch(0.55 0.22 310 / 0.12)" }}
+            style={{ background: "oklch(0.50 0.18 220 / 0.12)" }}
             aria-hidden="true"
           >
             {icon}
@@ -76,7 +76,7 @@ export function ServiceCard({
       <div className="flex items-center justify-between gap-3 mt-auto pt-1">
         <span
           className="font-bold text-base"
-          style={{ color: "oklch(0.55 0.22 310)" }}
+          style={{ color: "oklch(0.50 0.18 220)" }}
         >
           {priceDisplay}
         </span>

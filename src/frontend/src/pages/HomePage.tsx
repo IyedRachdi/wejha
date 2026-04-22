@@ -30,8 +30,8 @@ const statusChipColors: Record<
     label: "Confirmé",
   },
   enRoute: {
-    bg: "oklch(0.55 0.22 310 / 0.12)",
-    text: "oklch(0.45 0.22 310)",
+    bg: "oklch(0.50 0.18 220 / 0.12)",
+    text: "oklch(0.42 0.18 220)",
     label: "En route",
   },
   arrived: {
@@ -75,7 +75,7 @@ export default function HomePage() {
     <AppLayout
       activeTab="home"
       onTabChange={handleTabChange}
-      title="Wejha وجهة"
+      title="Rafiqni"
       showSos={false}
       userRole="pmr"
     >
@@ -84,7 +84,7 @@ export default function HomePage() {
         <div>
           <h1 className="font-display font-bold text-2xl text-foreground">
             Bonjour,{" "}
-            <span style={{ color: "oklch(0.55 0.22 310)" }}>
+            <span style={{ color: "oklch(0.50 0.18 220)" }}>
               {firstName} 👋
             </span>
           </h1>
@@ -132,8 +132,8 @@ export default function HomePage() {
           <div
             className="flex items-center gap-3 p-4 rounded-2xl border"
             style={{
-              background: "oklch(0.55 0.22 310 / 0.08)",
-              borderColor: "oklch(0.55 0.22 310 / 0.3)",
+              background: "oklch(0.50 0.18 220 / 0.08)",
+              borderColor: "oklch(0.50 0.18 220 / 0.3)",
             }}
             data-ocid="home.premium_status.section"
           >
@@ -143,7 +143,7 @@ export default function HomePage() {
             <div>
               <p
                 className="font-semibold text-sm"
-                style={{ color: "oklch(0.45 0.22 310)" }}
+                style={{ color: "oklch(0.42 0.18 220)" }}
               >
                 Abonné Premium ✓
               </p>
@@ -180,7 +180,7 @@ export default function HomePage() {
                   "transition-all duration-200",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                 )}
-                style={{ borderColor: "oklch(0.55 0.22 310 / 0.2)" }}
+                style={{ borderColor: "oklch(0.50 0.18 220 / 0.2)" }}
                 aria-label={`Trouver un service ${service.label}`}
               >
                 <span className="text-3xl" aria-hidden="true">
@@ -253,7 +253,7 @@ export default function HomePage() {
               data-ocid="home.bookings.see_all_button"
               onClick={() => navigate({ to: "/bookings" })}
               className="text-sm font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
-              style={{ color: "oklch(0.55 0.22 310)" }}
+              style={{ color: "oklch(0.50 0.18 220)" }}
             >
               Voir tout →
             </button>

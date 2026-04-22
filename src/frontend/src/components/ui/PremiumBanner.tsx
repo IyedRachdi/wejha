@@ -17,7 +17,7 @@ export function PremiumBanner({ onSubscribe }: PremiumBannerProps) {
       className="rounded-2xl p-5 text-white overflow-hidden relative"
       style={{
         background:
-          "linear-gradient(135deg, oklch(0.55 0.22 310), oklch(0.65 0.18 210))",
+          "linear-gradient(135deg, oklch(0.50 0.18 220), oklch(0.68 0.18 95))",
       }}
       data-ocid="premium_banner.section"
     >

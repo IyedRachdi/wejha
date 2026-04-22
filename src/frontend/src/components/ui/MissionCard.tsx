@@ -130,8 +130,8 @@ export function MissionCard({
             <span
               className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold"
               style={{
-                background: "oklch(0.55 0.22 310 / 0.12)",
-                color: "oklch(0.45 0.22 310)",
+                background: "oklch(0.50 0.18 220 / 0.12)",
+                color: "oklch(0.42 0.18 220)",
               }}
             >
               ⚡ En cours

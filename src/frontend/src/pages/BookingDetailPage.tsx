@@ -177,7 +177,7 @@ export default function BookingDetailPage() {
           data-ocid="booking_detail.back_link"
           onClick={() => navigate({ to: "/bookings" })}
           className="flex items-center gap-2 text-sm font-semibold min-h-[44px] -ml-1 px-1 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:opacity-70 transition-opacity"
-          style={{ color: "oklch(0.55 0.22 310)" }}
+          style={{ color: "oklch(0.50 0.18 220)" }}
           aria-label="Retour aux réservations"
         >
           <ArrowLeft className="w-4 h-4" aria-hidden="true" />
@@ -231,8 +231,8 @@ export default function BookingDetailPage() {
                 <span
                   className="text-xs font-semibold px-2.5 py-0.5 rounded-full"
                   style={{
-                    background: "oklch(0.55 0.22 310 / 0.1)",
-                    color: "oklch(0.45 0.22 310)",
+                    background: "oklch(0.50 0.18 220 / 0.1)",
+                    color: "oklch(0.42 0.18 220)",
                   }}
                 >
                   {serviceLabels[booking.serviceType]}
@@ -267,7 +267,7 @@ export default function BookingDetailPage() {
               </span>
               <span
                 className="font-bold text-lg"
-                style={{ color: "oklch(0.55 0.22 310)" }}
+                style={{ color: "oklch(0.50 0.18 220)" }}
               >
                 {booking.price} DT
               </span>

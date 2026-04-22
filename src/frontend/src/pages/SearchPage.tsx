@@ -123,8 +123,8 @@ export default function SearchPage() {
               style={
                 activeFilter === filter.key
                   ? {
-                      background: "oklch(0.55 0.22 310)",
-                      borderColor: "oklch(0.55 0.22 310)",
+                      background: "oklch(0.50 0.18 220)",
+                      borderColor: "oklch(0.50 0.18 220)",
                     }
                   : {}
               }
@@ -238,7 +238,7 @@ export default function SearchPage() {
           "hover:opacity-90 active:scale-95 transition-all duration-200",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
         )}
-        style={{ background: "oklch(0.55 0.22 310)" }}
+        style={{ background: "oklch(0.50 0.18 220)" }}
         aria-label="Nouvelle réservation"
       >
         <Plus className="w-5 h-5" aria-hidden="true" />

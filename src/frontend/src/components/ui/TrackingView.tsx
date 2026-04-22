@@ -58,7 +58,7 @@ export function TrackingView({
         className="relative h-40 flex items-center justify-center overflow-hidden"
         style={{
           background:
-            "linear-gradient(160deg, oklch(0.65 0.18 210 / 0.15), oklch(0.55 0.22 310 / 0.1))",
+            "linear-gradient(160deg, oklch(0.68 0.18 95 / 0.15), oklch(0.50 0.18 220 / 0.1))",
         }}
         aria-label="Carte de suivi en temps réel"
         role="img"
@@ -75,7 +75,7 @@ export function TrackingView({
                 y1="0"
                 x2={`${pct}%`}
                 y2="100%"
-                stroke="oklch(0.55 0.22 310)"
+                stroke="oklch(0.50 0.18 220)"
                 strokeWidth="1"
                 strokeDasharray="4,4"
               />
@@ -84,7 +84,7 @@ export function TrackingView({
                 y1={`${pct}%`}
                 x2="100%"
                 y2={`${pct}%`}
-                stroke="oklch(0.55 0.22 310)"
+                stroke="oklch(0.50 0.18 220)"
                 strokeWidth="1"
                 strokeDasharray="4,4"
               />
@@ -106,13 +106,13 @@ export function TrackingView({
             <div
               className="absolute inset-0 rounded-full animate-ping opacity-40"
               style={{
-                background: "oklch(0.55 0.22 310)",
+                background: "oklch(0.50 0.18 220)",
                 transform: "scale(2.5)",
               }}
             />
             <div
               className="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-lg z-10 relative"
-              style={{ background: "oklch(0.55 0.22 310)" }}
+              style={{ background: "oklch(0.50 0.18 220)" }}
             >
               {booking.providerName ? getInitials(booking.providerName) : "?"}
             </div>
@@ -132,7 +132,7 @@ export function TrackingView({
           className="absolute top-3 left-3 px-3 py-1.5 rounded-xl text-sm font-bold shadow-md"
           style={{
             background: "oklch(0.99 0.004 270)",
-            color: "oklch(0.55 0.22 310)",
+            color: "oklch(0.50 0.18 220)",
           }}
         >
           {isArrived ? "🎉 Arrivé !" : `Arrivée estimée: ${eta} min`}
@@ -145,7 +145,7 @@ export function TrackingView({
           className="w-12 h-12 rounded-full flex items-center justify-center text-base font-bold text-white flex-shrink-0"
           style={{
             background:
-              "linear-gradient(135deg, oklch(0.55 0.22 310), oklch(0.65 0.18 210))",
+              "linear-gradient(135deg, oklch(0.50 0.18 220), oklch(0.68 0.18 95))",
           }}
           aria-hidden="true"
         >
@@ -167,12 +167,12 @@ export function TrackingView({
             onClick={onContact}
             data-ocid="tracking_view.contact_button"
             className="w-11 h-11 rounded-full flex items-center justify-center transition-all hover:opacity-80 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            style={{ background: "oklch(0.55 0.22 310 / 0.12)" }}
+            style={{ background: "oklch(0.50 0.18 220 / 0.12)" }}
             aria-label="Appeler le prestataire"
           >
             <Phone
               className="w-5 h-5"
-              style={{ color: "oklch(0.55 0.22 310)" }}
+              style={{ color: "oklch(0.50 0.18 220)" }}
               aria-hidden="true"
             />
           </button>

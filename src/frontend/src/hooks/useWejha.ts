@@ -17,6 +17,7 @@ export function useMockBookings(): Booking[] {
     {
       id: "b-001",
       pmrId: "u-001",
+      clientName: "Salma Bouzid",
       providerId: "u-010",
       serviceType: "medical",
       description:
@@ -33,6 +34,7 @@ export function useMockBookings(): Booking[] {
     {
       id: "b-002",
       pmrId: "u-001",
+      clientName: "Salma Bouzid",
       providerId: "u-011",
       serviceType: "shopping",
       description: "Courses alimentaires au Monoprix du Lac",
@@ -48,6 +50,7 @@ export function useMockBookings(): Booking[] {
     {
       id: "b-003",
       pmrId: "u-001",
+      clientName: "Salma Bouzid",
       serviceType: "transport",
       description: "Transport fauteuil roulant vers le CNAM",
       status: "requested",

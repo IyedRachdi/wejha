@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 620" role="img" aria-labelledby="title desc">
+  <title id="title">Rafiqni رافقني</title>
+  <desc id="desc">Rafiqni brand logo with inclusive transport and care symbol</desc>
+  <defs>
+    <linearGradient id="blue" x1="124" y1="60" x2="404" y2="345" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3D6D98"/>
+      <stop offset="100%" stop-color="#1E446B"/>
+    </linearGradient>
+    <linearGradient id="green" x1="104" y1="62" x2="270" y2="296" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A9D04E"/>
+      <stop offset="100%" stop-color="#6E9F2F"/>
+    </linearGradient>
+    <linearGradient id="body" x1="150" y1="135" x2="372" y2="324" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2C5F8C"/>
+      <stop offset="100%" stop-color="#173D63"/>
+    </linearGradient>
+    <linearGradient id="lift" x1="326" y1="148" x2="411" y2="314" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A9D04E"/>
+      <stop offset="100%" stop-color="#7DA838"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="620" fill="#FFFFFF"/>
+  <path d="M127 175C127 108 179 62 243 62C269 62 292 70 311 83" fill="none" stroke="url(#green)" stroke-width="22" stroke-linecap="round"/>
+  <path d="M384 83C402 70 425 62 451 62C474 62 493 71 508 85" fill="none" stroke="url(#blue)" stroke-width="22" stroke-linecap="round" opacity="0.0"/>
+  <path d="M386 175C386 108 334 62 270 62C244 62 221 70 202 83" fill="none" stroke="url(#blue)" stroke-width="22" stroke-linecap="round"/>
+  <path d="M128 176C128 250 182 304 255 304C328 304 382 250 382 176" fill="none" stroke="#1E3C61" stroke-width="8" stroke-linecap="round" opacity="0.12"/>
+  <circle cx="182" cy="175" r="18" fill="url(#body)"/>
+  <rect x="168" y="194" width="28" height="64" rx="14" fill="url(#body)"/>
+  <rect x="146" y="224" width="56" height="10" rx="5" fill="url(#body)"/>
+  <rect x="182" y="229" width="24" height="12" rx="6" fill="url(#body)" transform="rotate(90 182 229)"/>
+  <rect x="164" y="252" width="16" height="58" rx="8" fill="url(#body)"/>
+  <circle cx="253" cy="172" r="18" fill="url(#body)"/>
+  <path d="M224 250C226 221 235 194 252 182C269 194 278 221 280 250" fill="url(#body)"/>
+  <path d="M206 208H300" stroke="url(#body)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M252 208V286" stroke="url(#body)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M236 246L204 258" stroke="url(#body)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M268 246L300 258" stroke="url(#body)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M246 144L276 130L289 145L280 173H224L215 145Z" fill="url(#body)"/>
+  <path d="M248 144L276 130" stroke="#CFE8FF" stroke-width="7" stroke-linecap="round"/>
+  <path d="M278 130L289 145" stroke="#CFE8FF" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="336" cy="176" r="18" fill="url(#lift)"/>
+  <rect x="322" y="194" width="28" height="64" rx="14" fill="url(#lift)"/>
+  <path d="M330 240V306" stroke="url(#lift)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M330 242L309 262" stroke="url(#lift)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M334 245L351 266" stroke="url(#lift)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M319 208H336" stroke="url(#lift)" stroke-width="10" stroke-linecap="round"/>
+  <rect x="160" y="292" width="192" height="74" rx="18" fill="#163B61"/>
+  <rect x="177" y="274" width="158" height="34" rx="12" fill="#D9E3EA"/>
+  <rect x="198" y="278" width="116" height="12" rx="6" fill="#FFFFFF" opacity="0.9"/>
+  <rect x="204" y="294" width="104" height="9" rx="4.5" fill="#9AA7B2"/>
+  <text x="256" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#F1C94C">TAXI</text>
+  <rect x="176" y="318" width="160" height="42" rx="13" fill="#1E4C76"/>
+  <rect x="188" y="330" width="20" height="10" rx="4" fill="#F4D34F"/>
+  <rect x="302" y="330" width="20" height="10" rx="4" fill="#F4D34F"/>
+  <g fill="#F4D34F">
+    <rect x="240" y="333" width="12" height="8" rx="2"/>
+    <rect x="256" y="333" width="12" height="8" rx="2"/>
+    <rect x="272" y="333" width="12" height="8" rx="2"/>
+    <rect x="248" y="344" width="12" height="8" rx="2"/>
+    <rect x="264" y="344" width="12" height="8" rx="2"/>
+  </g>
+  <text x="256" y="492" text-anchor="middle" font-family="Arial, sans-serif" font-size="94" font-weight="800" fill="#164B7C" letter-spacing="-2">Rafiqni</text>
+  <text x="256" y="574" text-anchor="middle" font-family="Arial, sans-serif" font-size="84" font-weight="700" fill="#7CA935" direction="rtl" unicode-bidi="plaintext">رافقني</text>
+</svg>

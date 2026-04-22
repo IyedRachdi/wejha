@@ -139,7 +139,7 @@ export default function StudentDashboardPage() {
     <AppLayout
       activeTab="home"
       onTabChange={(_, route) => navigate({ to: route as "/" })}
-      title="Wejha"
+      title="Rafiqni"
       userRole="student"
     >
       <div className="pb-10">
@@ -271,8 +271,8 @@ export default function StudentDashboardPage() {
                     style={
                       isCurrent
                         ? {
-                            background: "oklch(0.55 0.22 310 / 0.1)",
-                            border: "2px solid oklch(0.55 0.22 310 / 0.5)",
+                            background: "oklch(0.50 0.18 220 / 0.1)",
+                            border: "2px solid oklch(0.50 0.18 220 / 0.5)",
                           }
                         : isUnlocked
                           ? {
@@ -304,7 +304,7 @@ export default function StudentDashboardPage() {
                     {isCurrent && (
                       <span
                         className="text-[9px] font-bold px-1.5 py-0.5 rounded-full text-primary-foreground"
-                        style={{ background: "oklch(0.55 0.22 310)" }}
+                        style={{ background: "oklch(0.50 0.18 220)" }}
                       >
                         Actuel
                       </span>
@@ -333,7 +333,7 @@ export default function StudentDashboardPage() {
                     style={{
                       width: `${Math.min(100, (points / nextTier.minPts) * 100)}%`,
                       background:
-                        "linear-gradient(90deg, oklch(0.55 0.22 310), oklch(0.65 0.18 210))",
+                        "linear-gradient(90deg, oklch(0.50 0.18 220), oklch(0.68 0.18 95))",
                     }}
                     role="progressbar"
                     tabIndex={0}
@@ -395,7 +395,7 @@ export default function StudentDashboardPage() {
               </h2>
               <span
                 className="inline-flex items-center justify-center w-5 h-5 rounded-full text-[10px] font-bold text-primary-foreground"
-                style={{ background: "oklch(0.55 0.22 310)" }}
+                style={{ background: "oklch(0.50 0.18 220)" }}
                 aria-label={`${availableMissions.length} missions`}
               >
                 {availableMissions.length}
@@ -435,7 +435,7 @@ export default function StudentDashboardPage() {
                   data-ocid="missions.see_all.link"
                   onClick={() => setShowAllMissions((v) => !v)}
                   className="w-full text-center text-sm font-semibold py-3 rounded-xl border transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary min-h-[44px] text-primary hover:bg-primary/5"
-                  style={{ borderColor: "oklch(0.55 0.22 310 / 0.3)" }}
+                  style={{ borderColor: "oklch(0.50 0.18 220 / 0.3)" }}
                 >
                   {showAllMissions
                     ? "Réduire ↑"

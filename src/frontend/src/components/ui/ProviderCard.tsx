@@ -67,7 +67,7 @@ export function ProviderCard({
             )}
             style={{
               background:
-                "linear-gradient(135deg, oklch(0.55 0.22 310), oklch(0.65 0.18 210))",
+                "linear-gradient(135deg, oklch(0.50 0.18 220), oklch(0.68 0.18 95))",
             }}
             aria-hidden="true"
           >
@@ -100,8 +100,8 @@ export function ProviderCard({
               style={
                 isDriver
                   ? {
-                      background: "oklch(0.55 0.22 310 / 0.12)",
-                      color: "oklch(0.45 0.22 310)",
+                        background: "oklch(0.50 0.18 220 / 0.12)",
+                        color: "oklch(0.42 0.18 220)",
                     }
                   : {
                       background: "oklch(0.65 0.18 210 / 0.12)",
@@ -168,7 +168,7 @@ export function ProviderCard({
           </span>
           <span
             className="text-xs font-semibold"
-            style={{ color: "oklch(0.55 0.22 310)" }}
+            style={{ color: "oklch(0.50 0.18 220)" }}
             aria-hidden="true"
           >
             Voir le profil →

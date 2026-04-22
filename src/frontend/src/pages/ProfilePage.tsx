@@ -59,14 +59,14 @@ const mockProfile = {
 const mockReviews = [
   {
     id: "r-001",
-    authorName: "Amira B.",
+    authorName: "Amira Ben Salah",
     stars: 5,
     text: "Très agréable, toujours ponctuelle et attentionnée. Je recommande vivement !",
     createdAt: Date.now() - 7 * 24 * 60 * 60 * 1000,
   },
   {
     id: "r-002",
-    authorName: "Yassine C.",
+    authorName: "Yassine Cherif",
     stars: 4,
     text: "Bonne communication, a su s'adapter à mes besoins spécifiques.",
     createdAt: Date.now() - 14 * 24 * 60 * 60 * 1000,
@@ -148,7 +148,7 @@ export default function ProfilePage() {
     <AppLayout
       activeTab={activeTab}
       onTabChange={handleTabChange}
-      title="Mon profil"
+      title="Rafiqni"
       userRole={userRole ?? "pmr"}
     >
       <div className="px-4 py-4 space-y-4">

@@ -41,6 +41,7 @@ export interface UserProfile {
 export interface Booking {
   id: string;
   pmrId: string;
+  clientName?: string;
   providerId?: string;
   serviceType: ServiceType;
   description: string;

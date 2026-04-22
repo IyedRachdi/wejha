@@ -38,8 +38,8 @@ const statusChipColors: Record<
     label: "Confirmé",
   },
   enRoute: {
-    bg: "oklch(0.55 0.22 310 / 0.12)",
-    text: "oklch(0.45 0.22 310)",
+    bg: "oklch(0.50 0.18 220 / 0.12)",
+    text: "oklch(0.42 0.18 220)",
     label: "En route",
   },
   arrived: {
@@ -154,8 +154,8 @@ function BookingItem({
           <span
             className="text-xs font-semibold px-2.5 py-1 rounded-full"
             style={{
-              background: "oklch(0.55 0.22 310 / 0.1)",
-              color: "oklch(0.45 0.22 310)",
+              background: "oklch(0.50 0.18 220 / 0.1)",
+              color: "oklch(0.42 0.18 220)",
             }}
           >
             {serviceLabels[booking.serviceType]}
@@ -182,7 +182,7 @@ function BookingItem({
             <>
               <div
                 className="w-5 h-5 rounded-full flex items-center justify-center text-[9px] font-bold text-white flex-shrink-0"
-                style={{ background: "oklch(0.55 0.22 310)" }}
+                style={{ background: "oklch(0.50 0.18 220)" }}
                 aria-hidden="true"
               >
                 {booking.providerName.charAt(0)}
@@ -211,7 +211,7 @@ function BookingItem({
         </span>
         <span
           className="font-bold text-sm"
-          style={{ color: "oklch(0.55 0.22 310)" }}
+          style={{ color: "oklch(0.50 0.18 220)" }}
         >
           {booking.price} DT
         </span>
@@ -264,7 +264,7 @@ export default function BookingsPage() {
             >
               <p
                 className="font-bold text-lg"
-                style={{ color: "oklch(0.55 0.22 310)" }}
+                style={{ color: "oklch(0.50 0.18 220)" }}
               >
                 {tabBookings[tab.key].length}
               </p>
@@ -299,8 +299,8 @@ export default function BookingsPage() {
               style={
                 activeTab === tab.key
                   ? {
-                      color: "oklch(0.45 0.22 310)",
-                      borderBottom: "2px solid oklch(0.55 0.22 310)",
+                      color: "oklch(0.42 0.18 220)",
+                      borderBottom: "2px solid oklch(0.50 0.18 220)",
                       marginBottom: "-1px",
                     }
                   : {}
@@ -313,8 +313,8 @@ export default function BookingsPage() {
                   style={
                     activeTab === tab.key
                       ? {
-                          background: "oklch(0.55 0.22 310 / 0.12)",
-                          color: "oklch(0.45 0.22 310)",
+                          background: "oklch(0.50 0.18 220 / 0.12)",
+                          color: "oklch(0.42 0.18 220)",
                         }
                       : {
                           background: "oklch(0.92 0.01 270)",

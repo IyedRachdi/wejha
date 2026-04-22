@@ -13,14 +13,11 @@ function Slide1() {
   return (
     <div className="flex flex-col items-center justify-center text-center gap-6 px-6 py-4">
       <div className="relative flex flex-col items-center">
-        <div className="w-28 h-28 rounded-full gradient-primary flex items-center justify-center shadow-xl">
-          <span className="text-primary-foreground font-display font-black text-5xl">
-            W
-          </span>
-        </div>
-        <span className="mt-2 text-xl font-bold text-foreground" dir="rtl">
-          وجهة
-        </span>
+        <img
+          src="/favicon.svg"
+          alt="Rafiqni رافقني"
+          className="w-28 h-28 rounded-3xl shadow-xl object-cover bg-white"
+        />
       </div>
       <div
         className="w-20 h-20 rounded-full flex items-center justify-center shadow-lg"
@@ -34,7 +31,7 @@ function Slide1() {
       </div>
       <div className="space-y-3 max-w-xs">
         <h1 className="font-display font-black text-3xl text-foreground leading-tight">
-          Bienvenue sur Wejha
+          Bienvenue sur Rafiqni
         </h1>
         <p className="font-semibold text-lg text-primary italic">
           Ensemble, sans frontières
